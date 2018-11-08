@@ -45,7 +45,7 @@ To get the theme running locally on your computer, run the following commands:
 4. `npm run scss`
 
 Now, when you make any changes to the `.scss` files in the `./scss` directory,
-they will be automatically compiled into the `./css/ucsb.css` file.
+they will be automatically compiled into the `./docs/css/ucsb.css` file.
 
 You can view the impact of these changes by opening up the `index.html` file
 in the `./docs` directory.
