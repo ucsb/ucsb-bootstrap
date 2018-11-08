@@ -1,0 +1,25 @@
+{
+  "name": "ucsb-bootstrap",
+  "version": "0.1.0",
+  "description": "UCSB Bootstrap theme",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed --watch scss/ucsb.scss dist/css/ucsb.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCSantaBarbara/ucsb-bootstrap.git"
+  },
+  "author": "University of California, Santa Barbara",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/UCSantaBarbara/ucsb-bootstrap/issues"
+  },
+  "homepage": "https://github.com/UCSantaBarbara/ucsb-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}
