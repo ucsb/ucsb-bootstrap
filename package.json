@@ -4,7 +4,7 @@
   "description": "UCSB Bootstrap theme",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --output-style compressed --watch scss/ucsb.scss dist/css/ucsb.css"
+    "scss": "node-sass --output-style compressed --watch scss/ucsb.scss docs/css/ucsb.css"
   },
   "repository": {
     "type": "git",
