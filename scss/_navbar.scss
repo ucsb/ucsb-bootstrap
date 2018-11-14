@@ -77,6 +77,12 @@ wxMi41ODU3ODY0IFoiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICAgIDwvc3ZnPg==");
   background: #002B4C;
 }
 
+.dropdown.show .dropdown-toggle::after
+{
+  margin-bottom: -0.5rem;
+  transform: scaleY(-1);
+}
+
 .dropdown-header
 {
   font-size: 0.75rem;
