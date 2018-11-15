@@ -18,6 +18,7 @@
 a.nav-link
 {
   color: #FFF;
+  height: 2.25rem;
   text-transform: uppercase;
   position: relative;
   z-index: 1;
@@ -51,25 +52,23 @@ li.nav-item.dropdown.show::before
   display: none;
 }
 
-.dropdown-toggle::after
+.dropdown-toggle::after, a.nav-link[data-toggle="collapse"]::after
 {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1
-sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgICAgICAgICAgIC
-AgICAgICA8cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTIsMTIuNTg1Nzg2NCBMOC43MDcxMDY3OCw5L
-jI5Mjg5MzIyIEM4LjMxNjU4MjQ5LDguOTAyMzY4OTMgNy42ODM0MTc1MSw4LjkwMjM2ODkzIDcu
-MjkyODkzMjIsOS4yOTI4OTMyMiBDNi45MDIzNjg5Myw5LjY4MzQxNzUxIDYuOTAyMzY4OTMsMTA
-uMzE2NTgyNSA3LjI5Mjg5MzIyLDEwLjcwNzEwNjggTDExLjI5Mjg5MzIsMTQuNzA3MTA2OCBDMT
-EuNjgzNDE3NSwxNS4wOTc2MzExIDEyLjMxNjU4MjUsMTUuMDk3NjMxMSAxMi43MDcxMDY4LDE0L
-jcwNzEwNjggTDE2LjcwNzEwNjgsMTAuNzA3MTA2OCBDMTcuMDk3NjMxMSwxMC4zMTY1ODI1IDE3
-LjA5NzYzMTEsOS42ODM0MTc1MSAxNi43MDcxMDY4LDkuMjkyODkzMjIgQzE2LjMxNjU4MjUsOC4
-5MDIzNjg5MyAxNS42ODM0MTc1LDguOTAyMzY4OTMgMTUuMjkyODkzMiw5LjI5Mjg5MzIyIEwxMi
-wxMi41ODU3ODY0IFoiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICAgIDwvc3ZnPg==");
+sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMDAlIiBoZW
+lnaHQ9IjEwMCUiIHZpZXdCb3g9IjE0NS44MzMgMTg3LjUgMjA4LjMzMyAxMjUiPg0KPHBhdGggZ
+mlsbD0iI0ZGRiIgZD0iTTI1MCwyNjIuMjA0bC02OC42MDItNjguNjAyYy04LjEzNi04LjEzNi0y
+MS4zMjctOC4xMzYtMjkuNDYzLDBjLTguMTM2LDguMTM2LTguMTM2LDIxLjMyNywwLDI5LjQ2M2w
+4My4zMzMsODMuMzMzDQoJYzguMTM2LDguMTM2LDIxLjMyNyw4LjEzNiwyOS40NjMsMGw4My4zMz
+MtODMuMzMzYzguMTM2LTguMTM2LDguMTM2LTIxLjMyNywwLTI5LjQ2M2MtOC4xMzYtOC4xMzYtM
+jEuMzI2LTguMTM2LTI5LjQ2MywwDQoJTDI1MCwyNjIuMjA0eiIvPg0KPC9zdmc+DQo=");
   border: none;
-  height: 1rem;
-  margin-left: 0;
-  margin-top: -0.5rem;
-  vertical-align: 0;
-  width: 1.1rem;
+  content: '';
+  display: inline-block;
+  height: 0.375rem;
+  vertical-align: 0.12em;
+  margin-left: 0.625rem;
+  width: 0.625rem;
 }
 
 .dropdown.show a.nav-link.dropdown-toggle
@@ -77,13 +76,45 @@ wxMi41ODU3ODY0IFoiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICAgIDwvc3ZnPg==");
   background: #002B4C;
 }
 
-.dropdown.show .dropdown-toggle::after
+a.nav-link[data-toggle="collapse"]
 {
-  margin-bottom: -0.5rem;
+  background: #07528C;
+}
+
+a.nav-link[data-toggle="collapse"].collapsed
+{
+  background: #003660;
+}
+
+.dropdown.show .dropdown-toggle::after, a.nav-link[data-toggle="collapse"]::after
+{
   transform: scaleY(-1);
+}
+
+a.nav-link[data-toggle="collapse"].collapsed::after
+{
+  transform: scaleY(1);
 }
 
 .dropdown-header
 {
   font-size: 0.75rem;
+}
+
+.collapsing
+{
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+}
+
+a.nav-link .icon
+{
+  margin-bottom: -0.4em;
+}
+
+.navbar-section
+{
+  background: #07528C;
+  height: 217px;
 }
