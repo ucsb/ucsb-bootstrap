@@ -1,4 +1,4 @@
-.navbar-brand, a.nav-link, .dropdown-item, .dropdown-header
+.navbar-brand, a.nav-link, .dropdown-item, .dropdown-header, .navbar-search, .navbar-search .form-control
 {
   font-family: Avenir, sans-serif;
   font-weight: 100;
@@ -117,8 +117,90 @@ a.nav-link .icon
   margin-bottom: -0.4em;
 }
 
-.navbar-section
+.navbar-search
 {
   background: #07528C;
-  height: 217px;
+  color: #FFF;
+  height: 13.5625rem;
+  padding-top: 2.5rem;
+}
+
+.navbar-search .form-control
+{
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  color: #FFF;
+  font-size: 1.375rem;
+  padding: 1.5rem 0.75rem 1.25rem 3.125rem;
+}
+
+.navbar-search .form-control::placeholder
+{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-search .form-control:focus
+{
+  box-shadow: none;
+}
+
+.navbar-search .form-group
+{
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.navbar-search button[type="submit"]
+{
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1
+sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIA0KCSB3aWR0aD0iMTAwJS
+IgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSI5MC4yNzggOTAuMjc4IDMzNi44MDUgMzM2LjgwNSI+D
+Qo8cGF0aCBmaWxsPSIjRkZGIiBkPSJNMzE3LjQ5NCwzNDYuOTU3QzI5My43OTksMzY0LjU3NSwy
+NjQuNDM2LDM3NSwyMzIuNjM5LDM3NWMtNzguNjI0LDAtMTQyLjM2MS02My43MzctMTQyLjM2MS0
+xNDIuMzYxDQoJYzAtNzguNjI0LDYzLjczNy0xNDIuMzYxLDE0Mi4zNjEtMTQyLjM2MUMzMTEuMj
+YzLDkwLjI3OCwzNzUsMTU0LjAxNSwzNzUsMjMyLjYzOWMwLDMxLjc5Ny0xMC40MjUsNjEuMTYtM
+jguMDQzLDg0Ljg1NQ0KCWw3NC4wMjQsNzQuMDI0YzguMTM2LDguMTM2LDguMTM2LDIxLjMyNyww
+LDI5LjQ2M3MtMjEuMzI3LDguMTM2LTI5LjQ2MywwTDMxNy40OTQsMzQ2Ljk1N3ogTTIzMi42Mzk
+sMzMzLjMzNA0KCWM1NS42MTIsMCwxMDAuNjk0LTQ1LjA4MywxMDAuNjk0LTEwMC42OTVjMC01NS
+42MTItNDUuMDgyLTEwMC42OTQtMTAwLjY5NC0xMDAuNjk0Yy01NS42MTIsMC0xMDAuNjk0LDQ1L
+jA4My0xMDAuNjk0LDEwMC42OTQNCglDMTMxLjk0NCwyODguMjUxLDE3Ny4wMjcsMzMzLjMzNCwy
+MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 1.5625rem;
+  left: 0.5rem;
+  position: absolute;
+  top: 0.6rem;
+  width: 1.5625rem;
+}
+
+.navbar-search a
+{
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.navbar-search a:hover
+{
+  text-decoration: none;
+}
+
+.navbar-search p
+{
+  font-size: 0.875rem;
+  letter-spacing: 0.7pt;
+  line-height: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-search p:nth-child(1)
+{
+  font-size: 0.75rem;
 }
