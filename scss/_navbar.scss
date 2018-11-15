@@ -105,6 +105,13 @@ a.nav-link[data-toggle="collapse"].collapsed::after
   font-size: 0.75rem;
 }
 
+.dropdown-item .icon-external
+{
+  height: 0.8125rem;
+  vertical-align: text-top;
+  width: 0.8125rem;
+}
+
 .collapsing
 {
   -webkit-transition: none;
