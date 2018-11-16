@@ -11,69 +11,92 @@
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <nav class="navbar navbar-dark bg-primary">
-    <div class="container">
+  <!-- Header -->
+  <div class="header">
 
-      <!-- UCSB Link -->
-      <a class="navbar-brand" href="https://ucsb.edu/">University of California, Santa Barbara</a>
+    <!-- Eyebrow -->
+    <div class="eyebrow">
 
-      <!-- Auxiliary Navigation -->
-      <ul class="nav">
+      <!-- Eyebrow Navigation -->
+      <div class="navbar navbar-dark bg-primary">
+        <div class="container">
 
-        <!-- Auxiliary Navigation: Give -->
-        <li class="nav-item">
-          <a class="nav-link" href="https://giving.ucsb.edu/">Give</a>
-        </li>
+          <!-- UCSB Link -->
+          <a class="navbar-brand" href="https://ucsb.edu/">University of California, Santa Barbara</a>
 
-        <!-- Auxiliary Navigation: Quick Links -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quick Links</a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <span class="dropdown-header">Information for:</span>
-            <a class="dropdown-item" href="https://ucsb.edu/future-students">Future Students</a>
-            <a class="dropdown-item" href="https://ucsb.edu/students">Students</a>
-            <a class="dropdown-item" href="https://ucsb.edu/parents-and-visitors">Parents &amp; Visitors</a>
-            <a class="dropdown-item" href="https://ucsb.edu/faculty-and-staff">Faculty &amp; Staff</a>
-            <a class="dropdown-item" href="https://www.alumni.ucsb.edu/">Alumni <span class="icon icon-external"></span></a>
+          <!-- Auxiliary Navigation -->
+          <ul class="nav">
+
+            <!-- Auxiliary Navigation: Give -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://giving.ucsb.edu/">Give</a>
+            </li>
+
+            <!-- Auxiliary Navigation: Quick Links -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quick Links</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <span class="dropdown-header">Information for:</span>
+                <a class="dropdown-item" href="https://ucsb.edu/future-students">Future Students</a>
+                <a class="dropdown-item" href="https://ucsb.edu/students">Students</a>
+                <a class="dropdown-item" href="https://ucsb.edu/parents-and-visitors">Parents &amp; Visitors</a>
+                <a class="dropdown-item" href="https://ucsb.edu/faculty-and-staff">Faculty &amp; Staff</a>
+                <a class="dropdown-item" href="https://www.alumni.ucsb.edu/">Alumni <span class="icon icon-external"></span></a>
+              </div>
+            </li>
+
+            <!-- Auxiliary Navigation: Search -->
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="#search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search">
+                <span class="icon icon-search" aria-hidden="true"></span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Eyebrow Section -->
+      <div class="collapse eyebrow-search" id="search">
+        <div class="container">
+
+          <form action="/search" method="get">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Type keywords and press enter..." aria-label="Search Query">
+              <button type="submit"><span class="sr-only">Search</span></button>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <p>Looking for someone?</p>
+              <p>Search for <a href="http://www.identity.ucsb.edu/people_finder/">Faculty &amp; Staff</a> or <a href="https://secure.identity.ucsb.edu/student_directory/">Students</a></p>
+            </div>
+            <div class="col-sm-3">
+              <p>Search our website index:</p>
+              <p><a href="/a-z">A-Z Index</a></p>
+            </div>
           </div>
-        </li>
 
-        <!-- Auxiliary Navigation: Search -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search">
-            <span class="icon icon-search" aria-hidden="true"></span>
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-  </nav>
-
-  <!-- Top Navigation Bar: Search -->
-  <div class="collapse navbar-search" id="search">
-    <div class="container">
-
-      <form action="/search" method="get">
-        <div class="form-group">
-          <input class="form-control" type="text" placeholder="Type keywords and press enter..." aria-label="Search Query">
-          <button type="submit"><span class="sr-only">Search</span></button>
-        </div>
-      </form>
-
-      <div class="row">
-        <div class="col-sm-3">
-          <p>Looking for someone?</p>
-          <p>Search for <a href="http://www.identity.ucsb.edu/people_finder/">Faculty &amp; Staff</a> or <a href="https://secure.identity.ucsb.edu/student_directory/">Students</a></p>
-        </div>
-        <div class="col-sm-3">
-          <p>Search our website index:</p>
-          <p><a href="/a-z">A-Z Index</a></p>
         </div>
       </div>
 
     </div>
+
+    <!-- Main Navigation -->
+    <div class="main-nav">
+
+      <div class="navbar">
+        <div class="container">
+
+          <h1 class="navbar-brand">University of California, Santa Barbara</h1>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
