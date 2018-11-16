@@ -1,9 +1,13 @@
 $eyebrow-dropdown-bg: #002B4C;
 $eyebrow-section-bg: #07528C;
 
-.eyebrow
+.header
 {
   font-family: Avenir, sans-serif;
+}
+
+.eyebrow
+{
   font-size: 0.75rem;
   font-weight: 100;
   letter-spacing: 0.5pt;
@@ -166,6 +170,9 @@ jEuMzI2LTguMTM2LTI5LjQ2MywwDQoJTDI1MCwyNjIuMjA0eiIvPg0KPC9zdmc+DQo=");
   color: #FFF;
   height: 13.5625rem;
   padding-top: 2.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: $zindex-dropdown;
 }
 
 .eyebrow-search .form-group
@@ -249,6 +256,12 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
   font-size: 0.75rem;
 }
 
+.main-nav
+{
+  background: #FFF;
+  font-weight: 200;
+}
+
 .main-nav .navbar
 {
   padding: 0;
@@ -256,7 +269,7 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
 
 .main-nav .navbar-brand
 {
-  margin: 2.5rem 0 1rem 0;
+  margin: 2.5rem 0 1.375rem 0;
   padding: 0;
 }
 
@@ -265,4 +278,32 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
   display: block;
   height: 1.5rem;
   padding: 0;
+}
+
+.main-nav .nav
+{
+  border-top: 1px solid #EEF0F2;
+  width: 100%;
+}
+
+.main-nav .nav-item
+{
+  margin: 0 1.25rem;
+}
+
+.main-nav .nav-item:first-child
+{
+  margin-left: 0;
+}
+
+.main-nav .nav-link
+{
+  border-bottom: 3px solid #FFF;
+  line-height: 1.25rem;
+  padding: 0.75rem 0 0.625rem;
+}
+
+.main-nav .nav-link:hover
+{
+  border-bottom: 3px solid $primary;
 }
