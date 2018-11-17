@@ -259,7 +259,6 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
 .main-nav
 {
   background: #FFF;
-  font-weight: 200;
 }
 
 .main-nav .navbar
@@ -288,12 +287,18 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
 
 .main-nav .nav-item
 {
+  font-weight: 200;
   margin: 0 1.25rem;
 }
 
 .main-nav .nav-item:first-child
 {
   margin-left: 0;
+}
+
+.main-nav .nav-item::after
+{
+  display: block;
 }
 
 .main-nav .nav-link
@@ -303,7 +308,55 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
   padding: 0.75rem 0 0.625rem;
 }
 
-.main-nav .nav-link:hover
+.main-nav .nav-link:hover, .main-nav .dropdown.show .nav-link
 {
   border-bottom: 3px solid $primary;
+}
+
+.main-nav .dropdown-toggle::after
+{
+  display: none;
+}
+
+.main-nav .dropdown-menu
+{
+  background-color: #E8ECF0;
+  border-color: #E8ECF0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.175);
+  margin: 0;
+  width: 62.5rem;
+}
+
+.main-nav .dropdown-header
+{
+  color: #005AA3;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+.main-nav .dropdown-header:hover
+{
+  color: #0076D6;
+}
+
+.main-nav .dropdown-item
+{
+  color: #005AA3;
+  padding: 0;
+}
+
+.main-nav .dropdown-item:hover
+{
+  background-color: transparent;
+  color: #0076D6;
+  text-decoration: underline;
+}
+
+// We're using super wide borders to hack in a background, so we only activate
+// them when the drop-down is actually shown
+.main-nav .dropdown-menu.show
+{
+  padding: 0 125rem;
+  left: -125rem;
 }
