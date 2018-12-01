@@ -6,6 +6,17 @@ $eyebrow-section-bg: #07528C;
   font-family: Avenir, sans-serif;
 }
 
+.header .navbar-brand
+{
+  background-image: url('../images/logo_white.svg');
+  background-repeat: no-repeat;
+  max-height: 1rem;
+  width: auto;
+}
+
+/*
+
+
 .eyebrow
 {
   font-size: 0.75rem;
@@ -21,6 +32,7 @@ $eyebrow-section-bg: #07528C;
 
 .eyebrow .navbar-brand
 {
+  display: none;
   font-size: 0.75rem;
   height: 1.375rem;
   padding-top: 0.1rem;
@@ -29,6 +41,14 @@ $eyebrow-section-bg: #07528C;
 .eyebrow .navbar-brand:hover
 {
   text-decoration: underline;
+}
+
+@include media-breakpoint-up(md)
+{
+  .eyebrow .navbar-brand
+  {
+    display: inline-block;
+  }
 }
 
 .eyebrow .nav-link
@@ -334,7 +354,7 @@ MzIuNjM5LDMzMy4zMzR6Ii8+DQo8L3N2Zz4=");
   grid-template-columns: auto auto auto;
 }
 
-/* We use a super wide psuedo element to simulate the background */
+// We use a super wide psuedo element to simulate the background
 .main-nav .dropdown-menu.show::after
 {
   background-color: #E8ECF0;
@@ -408,3 +428,4 @@ KCVY4LjE1eiIvPgo8L3N2Zz4=");
   height: 0.8125rem;
   width: 0.8125rem;
 }
+*/
