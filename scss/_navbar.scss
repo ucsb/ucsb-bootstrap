@@ -6,17 +6,52 @@ $eyebrow-section-bg: #07528C;
   font-family: Avenir, sans-serif;
 }
 
-.header .navbar-brand
+.navbar-brand
 {
   background-image: url('../images/logo_white.svg');
+  background-position: left center;
   background-repeat: no-repeat;
-  max-height: 1rem;
-  width: auto;
+  height: 100%;
+  margin: 0;
+  text-indent: -9999rem;
+  width: 75%;
+}
+
+.navbar-toggler
+{
+  border: 0;
+  height: 1.5em;
+  position: relative;
+  width: 1.5em;
+}
+
+.navbar-toggler .navbar-toggler-icon, .navbar-toggler::after, .navbar-toggler::before
+{
+  background: #FFF;
+  content: '';
+  display: block;
+  height: 14%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.navbar-toggler .navbar-toggler-icon
+{
+  top: 0;
+}
+
+.navbar-toggler::after
+{
+  top: 42%;
+}
+
+.navbar-toggler::before
+{
+  bottom: 0;
 }
 
 /*
-
-
 .eyebrow
 {
   font-size: 0.75rem;
