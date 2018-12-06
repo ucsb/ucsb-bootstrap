@@ -154,6 +154,11 @@ $eyebrow-section-bg: #07528C;
   padding-top: 0;
 }
 
+.main-nav .nav
+{
+  overflow: hidden;
+}
+
 .main-nav .nav-item
 {
 
@@ -178,6 +183,11 @@ $eyebrow-section-bg: #07528C;
   width: 0.875rem;
 }
 
+.main-nav .nav-item.show .dropdown-toggle::after
+{
+  transform: rotate(180deg);
+}
+
 .main-nav .dropdown-menu
 {
   border: none;
@@ -186,16 +196,21 @@ $eyebrow-section-bg: #07528C;
   width: 100%;
 }
 
-.main-nav .dropdown-item
+.main-nav .dropdown-header, .main-nav .dropdown-item
 {
-  
+  color: #005AA3;
+  font-size: 1rem;
+  font-weight: 200;
+  padding-bottom: 0.6875rem;
+  padding-top: 0.6875rem;
 }
 
-
-
-
-
-
+.main-nav .icon-external
+{
+  background-image: url('../images/external_blue.svg');
+  height: 0.8125rem;
+  width: 0.8125rem;
+}
 
 
 /*
