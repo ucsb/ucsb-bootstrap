@@ -6,23 +6,37 @@ $eyebrow-section-bg: #07528C;
   font-family: Avenir, sans-serif;
 }
 
+.navbar
+{
+  padding: 1.25rem 0 0 0;
+}
+
 .navbar-brand
 {
   background-image: url('../images/logo_white.svg');
   background-position: left center;
   background-repeat: no-repeat;
-  height: 100%;
-  margin: 0;
+  height: 1rem;
+  margin: 0 0 1.4rem 0.9375rem;
+  padding: 0;
   text-indent: -9999rem;
-  width: 75%;
+  width: 14.0625rem;
 }
 
 .navbar-toggler
 {
   border: 0;
-  height: 1.5em;
+  height: 0.875rem;
+  outline: none;
+  margin: 0 0.9375rem 1.4rem 0;
+  padding: 0;
   position: relative;
-  width: 1.5em;
+  width: 1.375rem;
+}
+
+.navbar-toggler:focus
+{
+  outline: 0;
 }
 
 .navbar-toggler .navbar-toggler-icon, .navbar-toggler::after, .navbar-toggler::before
@@ -33,6 +47,7 @@ $eyebrow-section-bg: #07528C;
   height: 14%;
   left: 0;
   position: absolute;
+  transition: opacity 0.1s, transform 0.2s;
   width: 100%;
 }
 
@@ -50,6 +65,92 @@ $eyebrow-section-bg: #07528C;
 {
   bottom: 0;
 }
+
+.navbar-toggler[aria-expanded="true"]::after
+{
+  opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon
+{
+  transform: translate(0, 0.375rem) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"]::before
+{
+  transform: translate(0, -0.375rem) rotate(-45deg);
+}
+
+#nav-wrapper
+{
+  width: 100%;
+}
+
+.header-search .container > *
+{
+  display: none;
+}
+
+.header-search .container
+{
+  padding: 0;
+}
+
+.header-search .header-search-form
+{
+  display: block;
+  position: relative;
+}
+
+.header-search-form .form-control
+{
+  border: 0;
+  border-radius: 0;
+  font-size: 0.875rem;
+  font-weight: 200;
+  height: auto;
+  padding: 0.75rem;
+}
+
+.header-search-form .form-control::placeholder
+{
+  color: #999;
+}
+
+.header-search-form .form-group
+{
+  margin: 0;
+}
+
+.header-search-form .btn
+{
+  background-color: transparent;
+  background-image: url('../images/search_grey.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 1.0625rem;
+  right: 0.5625rem;
+  position: absolute;
+  top: 0.8125rem;
+  width: 1.0625rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 .eyebrow
