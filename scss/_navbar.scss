@@ -83,6 +83,7 @@ $eyebrow-section-bg: #07528C;
 
 #nav-wrapper
 {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.175);
   width: 100%;
 }
 
@@ -161,7 +162,6 @@ $eyebrow-section-bg: #07528C;
 
 .main-nav .nav-item
 {
-
   font-weight: 500;
   width: 100%;
 }
@@ -212,6 +212,71 @@ $eyebrow-section-bg: #07528C;
   width: 0.8125rem;
 }
 
+.aux-nav
+{
+  background: rgb(238, 240, 242);
+  border-top: 1px solid rgb(161, 175, 186);
+}
+
+.aux-nav .nav-item
+{
+  float: left;
+  width: 50%;
+}
+
+.aux-nav .nav-link
+{
+  padding: 1.875rem 0.9375rem;
+}
+
+.aux-nav .dropdown
+{
+  width: 100%;
+}
+
+.aux-nav .dropdown-header
+{
+  display: none;
+}
+
+.aux-nav .dropdown-menu
+{
+  background: rgb(238, 240, 242);
+  border-bottom: 1px solid rgb(161, 175, 186);
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  column-count: 2;
+  display: block;
+  margin: 0;
+  padding: 0.9375rem;
+  position: initial;
+  width: 100%;
+}
+
+.aux-nav .dropdown-toggle
+{
+  display: none;
+}
+
+.aux-nav .dropdown-item
+{
+  color: #003660;
+  display: inline-block;
+  font-weight: 300;
+  padding: 1rem 0;
+}
+
+.aux-nav .dropdown-item:active, .aux-nav .dropdown-item:hover
+{
+  background: transparent;
+}
+
+.aux-nav .icon-external
+{
+  background-image: url('../images/external_003660.svg');
+  height: 0.8125rem;
+  width: 0.8125rem;
+}
 
 /*
 .eyebrow
