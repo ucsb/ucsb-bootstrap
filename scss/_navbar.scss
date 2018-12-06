@@ -138,12 +138,58 @@ $eyebrow-section-bg: #07528C;
   width: 1.0625rem;
 }
 
+.main-nav .navbar .container
+{
+  padding: 0;
+}
 
+.main-nav
+{
+  background: rgb(238, 240, 242);
+  border-top: 1px solid rgb(161, 175, 186);
+}
 
+.main-nav .navbar
+{
+  padding-top: 0;
+}
 
+.main-nav .nav-item
+{
 
+  font-weight: 500;
+  width: 100%;
+}
 
+.main-nav .nav-link, .main-nav .nav-link:hover
+{
+  color: #003660;
+  padding: 1rem 1.25rem;
+}
 
+.main-nav .dropdown-toggle::after
+{
+  background-image: url('../images/thin_caret_grey.svg');
+  border: none;
+  height: 0.5rem;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.5rem;
+  width: 0.875rem;
+}
+
+.main-nav .dropdown-menu
+{
+  border: none;
+  border-radius: 0;
+  position: initial;
+  width: 100%;
+}
+
+.main-nav .dropdown-item
+{
+  
+}
 
 
 
