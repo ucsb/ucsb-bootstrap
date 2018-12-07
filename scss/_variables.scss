@@ -3,7 +3,9 @@ $container-max-widths: (
 );
 
 $primary: #003660;
+$secondary: #FEBC11;
 
 $theme-colors: (
-  "primary": #003660
+  "primary": $primary,
+  "secondary": $secondary
 );
