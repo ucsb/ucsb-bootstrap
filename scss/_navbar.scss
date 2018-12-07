@@ -6,6 +6,11 @@ $eyebrow-section-bg: #07528C;
   font-family: Avenir, sans-serif;
 }
 
+.header .container
+{
+  padding: 0;
+}
+
 .navbar
 {
   padding: 1.25rem 0 0 0;
@@ -13,9 +18,15 @@ $eyebrow-section-bg: #07528C;
 
 .navbar-brand
 {
+  display: none;
+}
+
+.header-logo
+{
   background-image: url('../images/logo_white.svg');
   background-position: left center;
   background-repeat: no-repeat;
+  display: block;
   height: 1rem;
   margin: 0 0 1.4rem 0.9375rem;
   padding: 0;
@@ -84,6 +95,7 @@ $eyebrow-section-bg: #07528C;
 #nav-wrapper
 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.175);
+  margin-top: 3.625rem;
   width: 100%;
 }
 
@@ -158,6 +170,7 @@ $eyebrow-section-bg: #07528C;
 .main-nav .nav
 {
   overflow: hidden;
+  width: 100%;
 }
 
 .main-nav .nav-item
@@ -278,161 +291,230 @@ $eyebrow-section-bg: #07528C;
   width: 0.8125rem;
 }
 
-/*
-.eyebrow
-{
-  font-size: 0.75rem;
-  font-weight: 100;
-  letter-spacing: 0.5pt;
-}
-
-.eyebrow .navbar
-{
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.eyebrow .navbar-brand
-{
-  display: none;
-  font-size: 0.75rem;
-  height: 1.375rem;
-  padding-top: 0.1rem;
-}
-
-.eyebrow .navbar-brand:hover
-{
-  text-decoration: underline;
-}
-
 @include media-breakpoint-up(md)
 {
-  .eyebrow .navbar-brand
+  .navbar
   {
+    height: 2.25rem;
+    padding: 0 1.875rem;
+    z-index: 0;
+  }
+
+  .navbar-brand
+  {
+    display: block;
+  }
+
+  .navbar-toggler
+  {
+    display: none;
+  }
+
+  .ucsb-logo
+  {
+    font-size: 0.75rem;
+    font-weight: 100;
+    letter-spacing: 0.5pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ucsb-logo:hover
+  {
+    text-decoration: underline;
+  }
+
+  .header-logo
+  {
+    display: none;
+  }
+
+  #nav-wrapper
+  {
+    display: block;
+    margin-top: 0;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .header-search
+  {
+    display: none;
+  }
+
+  .main-nav
+  {
+    display: none;
+  }
+
+  .aux-nav
+  {
+    border-top: none;
+    position: relative;
+  }
+
+  .aux-nav .nav
+  {
+
+    background: transparent;
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 100;
+    letter-spacing: 0.5pt;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+  }
+
+  .aux-nav .nav-item, .aux-nav .dropdown
+  {
+    float: right;
+    width: auto;
+  }
+
+  .aux-nav .nav-link
+  {
+    color: #FFF;
+    padding: 0;
+  }
+
+  .aux-nav .dropdown-toggle
+  {
+    display: block;
+  }
+
+  .aux-nav .dropdown-menu
+  {
+    column-count: 1;
+    display: none;
+  }
+
+  .aux-nav .dropdown-menu.show
+  {
+    display: block;
+  }
+
+  .aux-nav .nav-link
+  {
+    color: #FFF;
+    height: 2.25rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1.25rem;
+    position: relative;
+  }
+
+  .aux-nav .nav-link::before
+  {
+    background-color: rgba(255, 255, 255, 0.12);
+    content: '';
+    display: block;
+    height: 72%;
+    position: absolute;
+    left: -1px;
+    top: 14%;
+    width: 1px;
+  }
+
+  .aux-nav .nav-item:last-child .nav-link::before, .eyebrow .nav-link[aria-expanded="true"]::before
+  {
+    display: none;
+  }
+
+  .aux-nav .nav-item.dropdown.show .nav-link::before
+  {
+    display: none;
+  }
+
+  .aux-nav .nav-item:nth-child(1) { z-index: 10; }
+  .aux-nav .nav-item:nth-child(2) { z-index: 9; }
+  .aux-nav .nav-item:nth-child(3) { z-index: 8; }
+  .aux-nav .nav-item:nth-child(4) { z-index: 7; }
+  .aux-nav .nav-item:nth-child(5) { z-index: 6; }
+  .aux-nav .nav-item:nth-child(6) { z-index: 5; }
+  .aux-nav .nav-item:nth-child(7) { z-index: 4; }
+  .aux-nav .nav-item:nth-child(8) { z-index: 3; }
+  .aux-nav .nav-item:nth-child(9) { z-index: 2; }
+  .aux-nav .nav-item:nth-child(10) { z-index: 1; }
+
+  .aux-nav .dropdown-toggle::after, .aux-nav .nav-link[data-toggle="collapse"]::after
+  {
+    background-image: url('../images/caret_white.svg');
+    border: none;
+    content: '';
     display: inline-block;
+    height: 0.375rem;
+    vertical-align: 0.12em;
+    margin-left: 0.625rem;
+    width: 0.625rem;
+  }
+
+  .aux-nav .dropdown.show .nav-link.dropdown-toggle
+  {
+    background: $eyebrow-dropdown-bg;
+  }
+
+  .aux-nav .nav-link[data-toggle="collapse"]
+  {
+    background: $eyebrow-section-bg;
+  }
+
+  .aux-nav .nav-link[data-toggle="collapse"].collapsed
+  {
+    background: $primary;
+  }
+
+  .aux-nav .dropdown-menu
+  {
+    background: $eyebrow-dropdown-bg;
+    border-radius: 0;
+    border-width: 0;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 16.25rem;
+  }
+
+  .aux-nav .dropdown.show .dropdown-toggle::after, .eyebrow .nav-link[data-toggle="collapse"]::after
+  {
+    transform: scaleY(-1);
+  }
+
+  .aux-nav .nav-link[data-toggle="collapse"].collapsed::after
+  {
+    transform: scaleY(1);
+  }
+
+  .aux-nav .dropdown-header
+  {
+    color: #FFF;
+    display: block;
+    font-size: 0.75rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .aux-nav .dropdown-item
+  {
+    color: #FFF;
+    font-weight: 100;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .aux-nav .dropdown-item:hover
+  {
+    background: $primary;
+  }
+
+  .aux-nav .dropdown-item .icon-external
+  {
+    background-image: url('../images/external_white.svg');
+    height: 0.8125rem;
+    vertical-align: text-top;
+    width: 0.8125rem;
   }
 }
 
-.eyebrow .nav-link
-{
-  color: #FFF;
-  height: 2.25rem;
-  text-transform: uppercase;
-  padding: 0.5rem 1.25rem;
-  position: relative;
-}
+/*
 
-.eyebrow .nav-link::before
-{
-  background-color: rgba(255, 255, 255, 0.12);
-  content: '';
-  display: block;
-  height: 72%;
-  position: absolute;
-  left: -1px;
-  top: 14%;
-  width: 1px;
-}
-
-.eyebrow .nav-item:first-child .nav-link::before, .eyebrow .nav-link[aria-expanded="true"]::before
-{
-  display: none;
-}
-
-.eyebrow .nav-item.dropdown.show .nav-link::before
-{
-  display: none;
-}
-
-.eyebrow .nav-item:nth-child(1) { z-index: 10; }
-.eyebrow .nav-item:nth-child(2) { z-index: 9; }
-.eyebrow .nav-item:nth-child(3) { z-index: 8; }
-.eyebrow .nav-item:nth-child(4) { z-index: 7; }
-.eyebrow .nav-item:nth-child(5) { z-index: 6; }
-.eyebrow .nav-item:nth-child(6) { z-index: 5; }
-.eyebrow .nav-item:nth-child(7) { z-index: 4; }
-.eyebrow .nav-item:nth-child(8) { z-index: 3; }
-.eyebrow .nav-item:nth-child(9) { z-index: 2; }
-.eyebrow .nav-item:nth-child(10) { z-index: 1; }
-
-.eyebrow .dropdown-toggle::after, .eyebrow .nav-link[data-toggle="collapse"]::after
-{
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1
-sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMDAlIiBoZW
-lnaHQ9IjEwMCUiIHZpZXdCb3g9IjE0NS44MzMgMTg3LjUgMjA4LjMzMyAxMjUiPg0KPHBhdGggZ
-mlsbD0iI0ZGRiIgZD0iTTI1MCwyNjIuMjA0bC02OC42MDItNjguNjAyYy04LjEzNi04LjEzNi0y
-MS4zMjctOC4xMzYtMjkuNDYzLDBjLTguMTM2LDguMTM2LTguMTM2LDIxLjMyNywwLDI5LjQ2M2w
-4My4zMzMsODMuMzMzDQoJYzguMTM2LDguMTM2LDIxLjMyNyw4LjEzNiwyOS40NjMsMGw4My4zMz
-MtODMuMzMzYzguMTM2LTguMTM2LDguMTM2LTIxLjMyNywwLTI5LjQ2M2MtOC4xMzYtOC4xMzYtM
-jEuMzI2LTguMTM2LTI5LjQ2MywwDQoJTDI1MCwyNjIuMjA0eiIvPg0KPC9zdmc+DQo=");
-  border: none;
-  content: '';
-  display: inline-block;
-  height: 0.375rem;
-  vertical-align: 0.12em;
-  margin-left: 0.625rem;
-  width: 0.625rem;
-}
-
-.eyebrow .dropdown.show .nav-link.dropdown-toggle
-{
-  background: $eyebrow-dropdown-bg;
-}
-
-.eyebrow .nav-link[data-toggle="collapse"]
-{
-  background: $eyebrow-section-bg;
-}
-
-.eyebrow .nav-link[data-toggle="collapse"].collapsed
-{
-  background: $primary;
-}
-
-.eyebrow .dropdown-menu
-{
-  background: $eyebrow-dropdown-bg;
-  border-radius: 0;
-  border-width: 0;
-  margin: 0;
-  min-width: 16.25rem;
-}
-
-.eyebrow .dropdown.show .dropdown-toggle::after, .eyebrow .nav-link[data-toggle="collapse"]::after
-{
-  transform: scaleY(-1);
-}
-
-.eyebrow .nav-link[data-toggle="collapse"].collapsed::after
-{
-  transform: scaleY(1);
-}
-
-.eyebrow .dropdown-header
-{
-  color: #FFF;
-  font-size: 0.75rem;
-}
-
-.eyebrow .dropdown-item
-{
-  color: #FFF;
-  font-weight: 100;
-  padding-bottom: 0.75rem;
-  padding-top: 0.75rem;
-}
-
-.eyebrow .dropdown-item:hover
-{
-  background: $primary;
-}
-
-.eyebrow .dropdown-item .icon-external
-{
-  height: 0.8125rem;
-  vertical-align: text-top;
-  width: 0.8125rem;
-}
 
 .eyebrow .collapsing
 {

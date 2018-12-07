@@ -12,15 +12,23 @@
 <body>
 
   <!-- Header -->
-  <div class="header fixed-top navbar navbar-dark bg-primary">
+  <div class="header">
 
-    <h1 class="navbar-brand">
-      <a href="https://ucsb.edu/">University of California, Santa Barbara</a>
-    </h1>
+    <div class="fixed-top navbar navbar-dark bg-primary">
+      <div class="container">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-wrapper" aria-controls="nav-wrapper" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <a class="navbar-brand ucsb-logo" href="https://ucsb.edu/">University of California, Santa Barbara</a>
+
+        <h1 class="navbar-brand header-logo">
+          <a href="https://ucsb.edu/">University of California, Santa Barbara</a>
+        </h1>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-wrapper" aria-controls="nav-wrapper" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      </div>
+    </div>
 
     <div id="nav-wrapper" class="collapse">
 
@@ -54,12 +62,6 @@
 
         <div class="navbar">
           <div class="container">
-
-            <!--
-            <h1 class="navbar-brand">
-              <a href="https://ucsb.edu/"><img src="images/logo_navy.svg" alt="University of California, Santa Barbara"></a>
-            </h1>
-            -->
 
             <ul class="nav">
 
@@ -134,34 +136,41 @@
       </div>
 
       <!-- Auxiliary Navigation -->
-      <div class="aux-nav">
+      <div class="aux-nav container">
 
-        <ul class="nav">
+          <ul class="nav">
 
-          <!-- Auxiliary Navigation: Quick Links -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quick Links</a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <span class="dropdown-header">Information for:</span>
-              <a class="dropdown-item" href="https://ucsb.edu/future-students">Future Students</a>
-              <a class="dropdown-item" href="https://ucsb.edu/students">Students</a>
-              <a class="dropdown-item" href="https://ucsb.edu/parents-and-visitors">Parents &amp; Visitors</a>
-              <a class="dropdown-item" href="https://ucsb.edu/faculty-and-staff">Faculty &amp; Staff</a>
-              <a class="dropdown-item" href="https://www.alumni.ucsb.edu/">Alumni <span class="icon icon-external"></span></a>
-            </div>
-          </li>
+            <!-- Auxiliary Navigation: Search -->
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="#search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search">
+                <span class="icon icon-search" aria-hidden="true"></span>
+              </a>
+            </li>
 
-          <!-- Auxiliary Navigation: Give Now -->
-          <li class="nav-item">
-            <a class="nav-link" href="https://giving.ucsb.edu/">Give Now</a>
-          </li>
+            <!-- Auxiliary Navigation: Quick Links -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quick Links</a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <span class="dropdown-header">Information for:</span>
+                <a class="dropdown-item" href="https://ucsb.edu/future-students">Future Students</a>
+                <a class="dropdown-item" href="https://ucsb.edu/students">Students</a>
+                <a class="dropdown-item" href="https://ucsb.edu/parents-and-visitors">Parents &amp; Visitors</a>
+                <a class="dropdown-item" href="https://ucsb.edu/faculty-and-staff">Faculty &amp; Staff</a>
+                <a class="dropdown-item" href="https://www.alumni.ucsb.edu/">Alumni <span class="icon icon-external"></span></a>
+              </div>
+            </li>
 
-          <!-- Auxiliary Navigation: A-Z Index -->
-          <li class="nav-item">
-            <a class="nav-link" href="https://ucsb.edu/a-z">A-Z Index</a>
-          </li>
+            <!-- Auxiliary Navigation: Give Now -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://giving.ucsb.edu/">Give Now</a>
+            </li>
 
-        </ul>
+            <!-- Auxiliary Navigation: A-Z Index -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://ucsb.edu/a-z">A-Z Index</a>
+            </li>
+
+          </ul>
 
       </div>
 
@@ -201,12 +210,7 @@
           </div>
         </li>
 
-        // Auxiliary Navigation: Search
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search">
-            <span class="icon icon-search" aria-hidden="true"></span>
-          </a>
-        </li>
+
 
       </ul>
 
