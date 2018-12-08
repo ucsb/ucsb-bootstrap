@@ -742,7 +742,7 @@ $eyebrow-section-bg: #07528C;
   {
     display: grid;
     grid-auto-columns: min-content;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
   }
 
   // We use a super wide psuedo element to simulate the background
@@ -798,5 +798,13 @@ $eyebrow-section-bg: #07528C;
     background-image: url('../images/main_nav_underline.gif');
     background-position: bottom;
     background-repeat: repeat-x;
+  }
+}
+
+@include media-breakpoint-up(lg)
+{
+  .main-nav .dropdown-menu.show
+  {
+    grid-template-columns: auto auto auto;
   }
 }
