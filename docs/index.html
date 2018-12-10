@@ -14,18 +14,20 @@
   <!-- Header -->
   <div class="header">
 
-    <div class="header-logo-wrapper">
+    <!-- Header Lock-up -->
+    <div class="header-lockup">
       <div class="container">
-        <h1 class="header-logo">
+        <h1 class="header-lockup-title">
           <a href="https://ucsb.edu/">University of California, Santa Barbara</a>
         </h1>
       </div>
     </div>
 
-    <div class="fixed-top navbar navbar-dark bg-primary">
+    <!-- Eyebrow -->
+    <div class="eyebrow">
       <div class="container">
 
-        <a class="navbar-brand ucsb-logo" href="https://ucsb.edu/">University of California, Santa Barbara</a>
+        <a class="ucsb-lockup" href="https://ucsb.edu/">University of California, Santa Barbara</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-wrapper" aria-controls="nav-wrapper" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,13 +36,14 @@
       </div>
     </div>
 
-    <div id="nav-wrapper" class="collapse">
+    <!-- Header Navigation -->
+    <div id="nav-wrapper" class="header-nav collapse">
 
       <!-- Header Search -->
-      <div class="header-search collapse" id="search">
+      <div class="header-nav-search collapse" id="header-search">
           <div class="container">
 
-            <form class="header-search-form" action="/search" method="get">
+            <form class="header-nav-search-form" action="/search" method="get">
               <div class="form-group">
                 <input class="form-control" type="text" placeholder="Search..." aria-label="Search Query">
                 <button class="btn" type="submit"><span class="sr-only">Search</span></button>
@@ -61,8 +64,8 @@
           </div>
         </div>
 
-        <!-- Main Navigation -->
-        <div class="main-nav">
+        <!-- Header Main Navigation -->
+        <div class="header-nav-main">
           <div class="container">
 
             <div class="navbar">
@@ -140,13 +143,14 @@
         </div>
 
         <!-- Auxiliary Navigation -->
-        <div class="aux-nav container">
+        <div class="header-nav-aux">
+          <div class="container">
 
             <ul class="nav">
 
               <!-- Auxiliary Navigation: Search -->
               <li class="nav-item d-none d-md-block d-lg-block">
-                <a class="nav-link collapsed" href="#search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search">
+                <a class="nav-link collapsed" href="#header-search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search" aria-label="Expand Search">
                   <span class="icon icon-search" aria-hidden="true"></span>
                 </a>
               </li>
@@ -176,6 +180,7 @@
 
             </ul>
 
+          </div>
         </div>
 
     </div>
