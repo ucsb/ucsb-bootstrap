@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://webfonts.brand.ucsb.edu/webfont.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/ucsb.css">
+
+  <style type="text/css">
+
+    iframe
+    {
+      border: 1px solid #CCC;
+      width: 100%;
+    }
+
+    .mobile-example
+    {
+      width: 50%;
+    }
+
+  </style>
+
+  <title>UCSB Boostrap Theme</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>UCSB Bootstrap Theme</h1>
+
+    <h2>Header</h2>
+
+    <p>
+      The header is a complex UI component, containing the website's lock-up,
+      navigation, and search. A full example is provided below, but we'll
+      go through building up the component step-by-step:
+    </p>
+
+    <h3>Wrapping Element</h3>
+
+    <p>
+      First, we'll start with a wrapping <code>&lt;div&gt;</code> that has
+      the <code>.header</code> class:
+    </p>
+
+<pre><code>&lt;div class="header"&gt;
+  &lt;-- Header Contents --&gt;
+&lt;/div&gt;</pre></code>
+
+  <h3>Lock-up</h3>
+
+  <p>
+    Inside the <code>.header &lt;div&gt;</code>, we add the "lock-up", or logo,
+    for our website:
+  </p>
+
+<pre><code>&lt;div class="lockup"&gt;
+  &lt;div class="container"&gt;
+    &lt;h1 class="lockup-title"&gt;
+      &lt;a href="https://your-website-address.ucsb.edu/"&gt;Your Website Name&lt;/a&gt;
+    &lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></code>
+
+  <p>
+    This will simply add a lock-up to the website, with no header background:
+  </p>
+
+  <iframe src="examples/header-0.html"></iframe>
+
+  <p>
+    You'll notice there are no images in the HTML: the link will actually be
+    swapped out with the image of our lock-up using CSS.
+  </p>
+
+  <h3>Eyebrow</h3>
+
+  <p>
+    Next, we'll add the "eyebrow", which is a thin blue bar at the top of
+    the website that contains two elements: the UCSB lock-up and the mobile
+    navigation toggle control:
+  </p>
+
+<pre><code>&lt;div class="eyebrow"&gt;
+  &lt;div class="container"&gt;
+
+    &lt;a class="ucsb-lockup" href="https://ucsb.edu/"&gt;University of California, Santa Barbara&lt;/a&gt;
+
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-wrapper" aria-controls="nav-wrapper" aria-expanded="false" aria-label="Toggle navigation"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</pre></code>
+
+  <p>
+    In the desktop view, the <code>.ucsb-lockup &lt;div&gt;</code> will
+    appear in the top-left corner:
+  </p>
+
+  <iframe src="examples/header-1.html"></iframe>
+
+  <p>
+    But in the mobile view, the <code>.ucsb-lockup &lt;div&gt;</code> will
+    disappear and the website lock-up will shift into its place. Along with
+    that, the mobile navigation toggle control will also appear:
+  </p>
+
+  <iframe src="examples/header-1.html" class="mobile-example"></iframe>
+
+  <h3>Header Navigation Wrapper</h3>
+
+  <p>
+    Next, we'll add a wrapping <code>.header-nav &lt;div&gt;</code> to
+    contain the rest of our navigation elements:
+  </p>
+
+<pre><code>&lt;div class="header"&gt;
+
+  &lt;!-- Header Lock-up --&gt;
+  &lt;div class="lockup"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+
+  &lt;!-- Eyebrow --&gt;
+  &lt;div class="eyebrow"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+
+  &lt;!-- Header Navigation Wrapper --&gt;
+  &lt;div id="nav-wrapper" class="header-nav collapse"&gt;
+    &lt;!-- This is where we'll put the rest of our navigation elements --&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+  <p>
+    As you can see, this <code>.header-nav &lt;div&gt;</code> has an
+    id of <code>#nav-wrapper</code> and a class of <code>.collapse</code>.
+    This allows us to control the visibility of the rest of our navigation
+    elements using the mobile navigation toggle control we added above.
+  </p>
+
+  <h3>Header Search</h3>
+
+  <p>
+    Within the <code>.header-nav &lt;div&gt;</code>, we can add a
+    <code>.header-nav-search &lt;div&gt;</code> to contain the header's
+    search section:
+  </p>
+
+<pre><code></code></pre>
+
+</body>
+</html>
