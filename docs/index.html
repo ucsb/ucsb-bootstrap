@@ -12,12 +12,18 @@
     iframe
     {
       border: 1px solid #CCC;
-      width: 100%;
+      height: 25em;
+      width: 99%;
     }
 
-    .mobile-example
+    h1, h2, h3
     {
-      width: 50%;
+      margin: 1em 0 0.5em;
+    }
+
+    .diorama
+    {
+      margin: 1.5em 0;
     }
 
   </style>
@@ -29,124 +35,245 @@
   <div class="container">
     <h1>UCSB Bootstrap Theme</h1>
 
+    <p>
+      <a href="example.html">View a full example website</a>
+    </p>
+
     <h2>Header</h2>
 
     <p>
-      The header is a complex UI component, containing the website's lock-up,
-      navigation, and search. A full example is provided below, but we'll
-      go through building up the component step-by-step:
+      The header is a complex UI component, containing a number of subcomponents.
+      Source code for a full example is provided below.
     </p>
 
-    <h3>Wrapping Element</h3>
+    <div class="row">
+      <div class="col-8">
+        <h4>Desktop View</h4>
+        <iframe src="examples/header-0.html"></iframe>
+      </div>
+      <div class="col-4">
+        <h4>Mobile View</h4>
+        <iframe src="examples/header-0.html"></iframe>
+      </div>
+    </div>
+
+    <h3>Subcomponents</h3>
 
     <p>
-      First, we'll start with a wrapping <code>&lt;div&gt;</code> that has
-      the <code>.header</code> class:
+      The header includes the following components:
     </p>
 
-<pre><code>&lt;div class="header"&gt;
-  &lt;-- Header Contents --&gt;
-&lt;/div&gt;</pre></code>
+    <h4>University Lock-up</h4>
 
-  <h3>Lock-up</h3>
+    <p>
+      A link to the main UCSB website. Appears in the top-left corner in the
+      desktop view and disappears in the mobile view.
+    </p>
 
-  <p>
-    Inside the <code>.header &lt;div&gt;</code>, we add the "lock-up", or logo,
-    for our website:
-  </p>
+    <h4>Auxiliary Navigation</h4>
 
-<pre><code>&lt;div class="lockup"&gt;
-  &lt;div class="container"&gt;
-    &lt;h1 class="lockup-title"&gt;
-      &lt;a href="https://your-website-address.ucsb.edu/"&gt;Your Website Name&lt;/a&gt;
-    &lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre></code>
+    <p>
+      Secondary navigation (e.g. "Give Now", "Quick Links", etc.) that appears
+      in the top-right corner in the desktop view and shifts to the bottom part
+      of the menu in the mobile view.
+    </p>
 
-  <p>
-    This will simply add a lock-up to the website, with no header background:
-  </p>
+    <h4>Website Lock-up</h4>
 
-  <iframe src="examples/header-0.html"></iframe>
+    <p>
+      Logo of the current website. Appears as the major focal point of the
+      header in both the desktop and mobile view.
+    </p>
 
-  <p>
-    You'll notice there are no images in the HTML: the link will actually be
-    swapped out with the image of our lock-up using CSS.
-  </p>
+    <h4>Main Navigation</h4>
 
-  <h3>Eyebrow</h3>
+    <p>
+      Main navigation for the website. Appears as a horizontal list in the
+      desktop view and a vertical list in the mobile view.
+    </p>
 
-  <p>
-    Next, we'll add the "eyebrow", which is a thin blue bar at the top of
-    the website that contains two elements: the UCSB lock-up and the mobile
-    navigation toggle control:
-  </p>
+    <h3>Full Example Source</h3>
 
-<pre><code>&lt;div class="eyebrow"&gt;
-  &lt;div class="container"&gt;
+    <p>
+      Here's the source code for a header like the one featured on the
+      <a href="http://ucsb.edu/">main UCSB website</a>:
+    </p>
 
-    &lt;a class="ucsb-lockup" href="https://ucsb.edu/"&gt;University of California, Santa Barbara&lt;/a&gt;
-
-    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-wrapper" aria-controls="nav-wrapper" aria-expanded="false" aria-label="Toggle navigation"&gt;
-      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;</pre></code>
-
-  <p>
-    In the desktop view, the <code>.ucsb-lockup &lt;div&gt;</code> will
-    appear in the top-left corner:
-  </p>
-
-  <iframe src="examples/header-1.html"></iframe>
-
-  <p>
-    But in the mobile view, the <code>.ucsb-lockup &lt;div&gt;</code> will
-    disappear and the website lock-up will shift into its place. Along with
-    that, the mobile navigation toggle control will also appear:
-  </p>
-
-  <iframe src="examples/header-1.html" class="mobile-example"></iframe>
-
-  <h3>Header Navigation Wrapper</h3>
-
-  <p>
-    Next, we'll add a wrapping <code>.header-nav &lt;div&gt;</code> to
-    contain the rest of our navigation elements:
-  </p>
-
-<pre><code>&lt;div class="header"&gt;
+<pre><code>&lt;!-- Header --&gt;
+&lt;div class="header"&gt;
 
   &lt;!-- Header Lock-up --&gt;
-  &lt;div class="lockup"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
-
-  &lt;!-- Eyebrow --&gt;
-  &lt;div class="eyebrow"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
-
-  &lt;!-- Header Navigation Wrapper --&gt;
-  &lt;div id="nav-wrapper" class="header-nav collapse"&gt;
-    &lt;!-- This is where we'll put the rest of our navigation elements --&gt;
+  &lt;div class="lockup"&gt;
+    &lt;div class="container"&gt;
+      &lt;h1 class="lockup-title"&gt;
+        &lt;a href="https://ucsb.edu/"&gt;University of California, Santa Barbara&lt;/a&gt;
+      &lt;/h1&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 
-&lt;/div&gt;</code></pre>
+  &lt;!-- Eyebrow --&gt;
+  &lt;div class="eyebrow"&gt;
+    &lt;div class="container"&gt;
 
-  <p>
-    As you can see, this <code>.header-nav &lt;div&gt;</code> has an
-    id of <code>#nav-wrapper</code> and a class of <code>.collapse</code>.
-    This allows us to control the visibility of the rest of our navigation
-    elements using the mobile navigation toggle control we added above.
-  </p>
+      &lt;a class="ucsb-lockup" href="https://ucsb.edu/"&gt;University of California, Santa Barbara&lt;/a&gt;
 
-  <h3>Header Search</h3>
+      &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-wrapper" aria-controls="nav-wrapper" aria-expanded="false" aria-label="Toggle navigation"&gt;
+        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+      &lt;/button&gt;
 
-  <p>
-    Within the <code>.header-nav &lt;div&gt;</code>, we can add a
-    <code>.header-nav-search &lt;div&gt;</code> to contain the header's
-    search section:
-  </p>
+    &lt;/div&gt;
+  &lt;/div&gt;
 
-<pre><code></code></pre>
+  &lt;!-- Header Navigation --&gt;
+  &lt;div id="nav-wrapper" class="header-nav collapse"&gt;
+
+    &lt;!-- Header Search --&gt;
+    &lt;div class="header-nav-search collapse" id="header-search"&gt;
+        &lt;div class="container"&gt;
+
+          &lt;form class="header-nav-search-form" action="/search" method="get"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;input class="form-control" type="text" placeholder="Search..." aria-label="Search Query"&gt;
+              &lt;button class="btn" type="submit"&gt;&lt;span class="sr-only"&gt;Search&lt;/span&gt;&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+
+          &lt;div class="row"&gt;
+            &lt;div class="col-sm-4"&gt;
+              &lt;p&gt;Looking for someone?&lt;/p&gt;
+              &lt;p&gt;Search for &lt;a href="http://www.identity.ucsb.edu/people_finder/"&gt;Faculty &amp; Staff&lt;/a&gt; or &lt;a href="https://secure.identity.ucsb.edu/student_directory/"&gt;Students&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-sm-3"&gt;
+              &lt;p&gt;Search our website index:&lt;/p&gt;
+              &lt;p&gt;&lt;a href="/a-z"&gt;A-Z Index&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Header Main Navigation --&gt;
+      &lt;div class="header-nav-main"&gt;
+        &lt;div class="container"&gt;
+
+          &lt;div class="navbar"&gt;
+
+              &lt;ul class="nav"&gt;
+
+                &lt;li class="nav-item dropdown"&gt;
+                  &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/applying" role="button" aria-haspopup="true" aria-expanded="false"&gt;Applying&lt;/a&gt;
+                  &lt;div class="dropdown-menu"&gt;
+                    &lt;a class="dropdown-header" href="/applying"&gt;Overview&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/applying/undergraduate-admission"&gt;Undergraduate Admission&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/applying/graduate-admission"&gt;Graduate Admission&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/applying/international-students"&gt;International Students&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/applying/summer-sessions"&gt;Summer Sessions &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/applying/summer-sessions"&gt;Professional Education &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li class="nav-item dropdown"&gt;
+                  &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/academics" role="button" aria-haspopup="true" aria-expanded="false"&gt;Academics&lt;/a&gt;
+                  &lt;div class="dropdown-menu"&gt;
+                    &lt;a class="dropdown-header" href="/academics"&gt;Overview&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/undergraduate"&gt;Undergraduate Colleges and Majors&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/graduate"&gt;Graduate Schools and Programs&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/professional-and-continuing-education"&gt;Professional Education&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/additional-opportunities"&gt;Additional Opportunities&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/academic-departments-and-programs"&gt;Departments &amp; Programs&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/academic-offices"&gt;Academic Offices&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/academics/mentorship-and-teaching"&gt;Mentoship and Teaching&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li class="nav-item dropdown"&gt;
+                  &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/research" role="button" aria-haspopup="true" aria-expanded="false"&gt;Research&lt;/a&gt;
+                  &lt;div class="dropdown-menu"&gt;
+                    &lt;a class="dropdown-header" href="/research"&gt;Overview&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="https://www.research.ucsb.edu/"&gt;Office of Research &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="https://undergrad.research.ucsb.edu/"&gt;Undergraduate Research &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="https://www.library.ucsb.edu/"&gt;Library &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="http://www.news.ucsb.edu/"&gt;The Current &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li class="nav-item dropdown"&gt;
+                  &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/campus-experience" role="button" aria-haspopup="true" aria-expanded="false"&gt;Campus Experience&lt;/a&gt;
+                  &lt;div class="dropdown-menu"&gt;
+                    &lt;a class="dropdown-header" href="/campus-experience"&gt;Overview&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="http://ucsbgauchos.com/"&gt;Athletics &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="http://recreation.sa.ucsb.edu/"&gt;Recreation &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="http://www.housing.ucsb.edu/"&gt;Housing &amp; Dining &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="http://osl.sa.ucsb.edu/"&gt;Office of Student Life &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="http://wellness.sa.ucsb.edu/"&gt;Health &amp; Wellness &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li class="nav-item dropdown"&gt;
+                  &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/about" role="button" aria-haspopup="true" aria-expanded="false"&gt;About&lt;/a&gt;
+                  &lt;div class="dropdown-menu"&gt;
+                    &lt;a class="dropdown-header" href="/about"&gt;Overview&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/majors-degrees-and-credentials"&gt;Majors, Degrees &amp; Credentials&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/facts-and-figures"&gt;Facts and Figures&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/faculty-and-alumni"&gt;Faculty and Alumni&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/history"&gt;History&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/administration"&gt;Administration&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/visit"&gt;Visit UCSB&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="/about/faq"&gt;FAQ&lt;/a&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+
+              &lt;/ul&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Auxiliary Navigation --&gt;
+      &lt;div class="header-nav-aux"&gt;
+        &lt;div class="container"&gt;
+
+          &lt;ul class="nav"&gt;
+
+            &lt;!-- Auxiliary Navigation: Search --&gt;
+            &lt;li class="nav-item d-none d-md-block d-lg-block"&gt;
+              &lt;a class="nav-link collapsed" href="#header-search" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="search" aria-label="Expand Search"&gt;
+                &lt;span class="icon icon-search" aria-hidden="true"&gt;&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;!-- Auxiliary Navigation: Quick Links --&gt;
+            &lt;li class="nav-item dropdown"&gt;
+              &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"&gt;Quick Links&lt;/a&gt;
+              &lt;div class="dropdown-menu dropdown-menu-right"&gt;
+                &lt;span class="dropdown-header"&gt;Information for:&lt;/span&gt;
+                &lt;a class="dropdown-item" href="https://ucsb.edu/future-students"&gt;Future Students&lt;/a&gt;
+                &lt;a class="dropdown-item" href="https://ucsb.edu/students"&gt;Students&lt;/a&gt;
+                &lt;a class="dropdown-item" href="https://ucsb.edu/parents-and-visitors"&gt;Parents &amp; Visitors&lt;/a&gt;
+                &lt;a class="dropdown-item" href="https://ucsb.edu/faculty-and-staff"&gt;Faculty &amp; Staff&lt;/a&gt;
+                &lt;a class="dropdown-item" href="https://www.alumni.ucsb.edu/"&gt;Alumni &lt;span class="icon icon-external"&gt;&lt;/span&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/li&gt;
+
+            &lt;!-- Auxiliary Navigation: Give Now --&gt;
+            &lt;li class="nav-item divider-none"&gt;
+              &lt;a class="nav-link text-secondary" href="https://giving.ucsb.edu/"&gt;Give Now&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;!-- Auxiliary Navigation: A-Z Index --&gt;
+            &lt;li class="nav-item d-md-none d-lg-none d-xl-none"&gt;
+              &lt;a class="nav-link" href="https://ucsb.edu/a-z"&gt;A-Z Index&lt;/a&gt;
+            &lt;/li&gt;
+
+          &lt;/ul&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;</pre></code>
 
 </body>
 </html>
