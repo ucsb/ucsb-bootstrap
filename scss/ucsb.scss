@@ -1,2 +1,9 @@
+// Theme Configuration
+@import "_variables";
+
+// Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
- 
+
+// CSS Overrides
+@import "_icons";
+@import "_header";
